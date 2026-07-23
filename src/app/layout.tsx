@@ -14,7 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NCCDRC — Nigerian Chambers of Commerce Dispute Resolution Centre",
+  icons: {
+    icon: "/images/logo.png",
+  },
+  title: "NCCDRC — Nigerian Chambers of Commerce and Dispute Resolution Centre",
   description:
     "The Nigerian Chambers of Commerce Dispute Resolution Centre (NCCDRC) resolves commercial disputes through arbitration and mediation, offering trainings, mentorship, and membership to businesses and ADR practitioners.",
 };
@@ -29,7 +32,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-white flex flex-col">
+      <body className="min-h-full bg-white flex flex-col ">
         <Navbar />
         <main className="flex-1">{children}</main>
       </body>
