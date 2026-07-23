@@ -152,7 +152,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   href={item.href}
-                  className="block rounded-md px-3 py-2 text-[15px] font-semibold text-slate-700 transition-colors hover:text-emerald-700"
+                  className="block rounded-md px-3 py-2 text-[15px] font-semibold text-slate-750 transition-colors hover:text-emerald-700"
                 >
                   {item.label}
                 </Link>
