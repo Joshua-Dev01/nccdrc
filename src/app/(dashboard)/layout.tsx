@@ -24,7 +24,7 @@ export default async function DashboardLayout({
 
   // Not logged in at all — staff dashboard, send to the admin login.
   if (!profile) {
-    redirect("/admin/login");
+    redirect("/admin-drc-staffs-20-20/login");
   }
 
   // Regular website users never get access to the admin dashboard.
