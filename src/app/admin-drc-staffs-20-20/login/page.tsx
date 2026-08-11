@@ -1,12 +1,5 @@
-import { LoginForm } from "@/src/components/auth/LoginForm";
+import { AdminLoginForm } from "@/src/components/auth/AdminLoginForm";
 
 export default function AdminLoginPage() {
-  return (
-    <LoginForm
-      heading="Admin Sign In"
-      subheading="For NCC-DRC staff and content administrators."
-      allowedRole="admin"
-      redirectTo="/dashboard"
-    />
-  );
+  return <AdminLoginForm />;
 }
