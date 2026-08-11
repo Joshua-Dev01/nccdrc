@@ -1,15 +1,14 @@
 "use client";
 
-import { LoaderIcon, Lock } from "lucide-react";
+import { Loader2Icon, Lock } from "lucide-react";
 import { useRoleLogin } from "@/src/lib/auth/useRoleLogin";
 
 export function SuperAdminLoginForm() {
-  const { email, setEmail, password, setPassword, error, loading, handleSubmit } =
+  const { email, setEmail, password, setPassword, loading, handleSubmit } =
     useRoleLogin("super_admin", "/dashboard");
 
   return (
     <div className="flex min-h-screen bg-slate-950">
-      {/* Left panel — branding, hidden on small screens */}
       <div className="relative hidden w-1/2 flex-col justify-between overflow-hidden bg-slate-900 p-12 lg:flex">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-black" />
         <div className="relative">
@@ -18,7 +17,7 @@ export function SuperAdminLoginForm() {
           </p>
         </div>
         <div className="relative">
-          <Lock size={32} className="text-red-500" strokeWidth={1.5} />
+          <Lock size={32} className="text-slate-500" strokeWidth={1.5} />
           <h2 className="mt-6 max-w-sm font-display text-2xl font-bold leading-snug text-white">
             Super Admin Console
           </h2>
@@ -32,7 +31,6 @@ export function SuperAdminLoginForm() {
         </p>
       </div>
 
-      {/* Right panel — form */}
       <div className="flex w-full flex-col items-center justify-center px-6 lg:w-1/2">
         <div className="w-full max-w-sm">
           <h1 className="font-display text-xl font-bold text-white">
@@ -77,20 +75,13 @@ export function SuperAdminLoginForm() {
               />
             </div>
 
-            {error && (
-              <p className="text-sm text-red-400" role="alert">
-                {error}
-              </p>
-            )}
-
             <button
               type="submit"
               disabled={loading}
-              className="w-full rounded-md bg-white px-4 py-2.5 cursor-pointer text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-200 disabled:opacity-60"
+              className="w-full rounded-md bg-white px-4 py-2.5 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-200 disabled:opacity-60"
             >
-              <span className={loading ? "inline-flex items-center justify-center" : ""}>
-                {loading ? <LoaderIcon className="animate-spin" size={16} /> : "Sign In"}
-              </span>
+                              {loading ? <Loader2Icon className="animate-spin" size={16} /> : "Sign In"}
+
             </button>
           </form>
         </div>
